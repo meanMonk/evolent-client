@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="card border m-auto" [ngStyle]="{'width':'80%'}">
+    <div class="card-header text-center text-white bg-dark">
+      Create New Contact
+    </div>
+    <div class="card-body px-5">
+      <form [formGroup]="contactForm" (ngSubmit)="saveContact(contactForm.value)">
+        <div class="form-group row">
+          <label for="firstName" class="col-md-4">First Name</label>
+          <div class="col-md-8">
+              <input type="text" formControlName="first_name" class="form-control form-control-sm" id="firstName" placeholder="Enter First Name">
+              <small class="text-small text-danger" *ngIf="contactForm.controls.first_name.invalid && (contactForm.controls.first_name.touched ||contactForm.controls.first_name.dirty )">First name is required!</small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="firstName" class="col-md-4">Last Name</label>
+          <div class="col-md-8">
+              <input type="text" formControlName="last_name" class="form-control form-control-sm" id="firstName" placeholder="Enter Last Name">
+              <small class="text-small text-danger" *ngIf="contactForm.controls.last_name.invalid && (contactForm.controls.last_name.touched ||contactForm.controls.last_name.dirty )">Last name is required!</small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="email" class="col-md-4">Email address</label>
+          <div class="col-md-8">
+              <input type="email" formControlName="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+              <small class="text-small text-danger" *ngIf="contactForm.controls.email.invalid && (contactForm.controls.email.touched ||contactForm.controls.email.dirty )">Email is not valid!</small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="firstName" class="col-md-4">Contact Number</label>
+          <div class="col-md-8">
+              <input type="text" formControlName="phone" class="form-control form-control-sm" id="firstName" placeholder="Enter Contact Number">
+              <small class="text-small text-danger" *ngIf="contactForm.controls.phone.invalid && (contactForm.controls.phone.touched ||contactForm.controls.phone.dirty )">Phone is not valid!</small>
+          </div>
+        </div>
+        <div class="card-title row">
+            <span for="checkbox" class="col-md-4">Status</span>
+            <div class="form-group col-md-8">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="statusCheckA" value="option1">
+                    <label class="form-check-label" for="statusCheckA">Active</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="statusCheckD" value="option2">
+                  <label class="form-check-label" for="statusCheckD">Deactive</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+                <button type="submit" [disabled]="!contactForm.valid" class="btn btn-outline-primary mr-4">Submit</button>
+                <button type="button" [routerLink]="['/list']" class="btn btn-outline-secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="card text-center">
+    <div class="card-body text-center px-3">
+        <p class="card-title text-uppercase">List Of User</p>
+        <table class="table table-sm table-hover text-center">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Phone No.</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of userList; let i = index">
+                <th>{{i+1}}</th>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+                <td>
+                    <span class="badge badge-pill badge-primary" *ngIf="user.active">Active</span>
+                    <span class="badge badge-pill badge-danger" *ngIf="!user.active" >Deactived</span>
+                </td>
+                <td>
+                    <button type="button" (click)="editUser(user)" class="px-1 mr-1 text-center py-0 btn btn-primary">
+                      <i class="fa fa-edit"></i>
+                    </button>
+                    <button type="button" (click)="deleteUser(user._id)" class="px-1 py-0 btn btn-danger">
+                      <i class="fa fa-trash"></i>
+                    </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+</div>

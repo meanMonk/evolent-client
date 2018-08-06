@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+/* load font awesome icons */
+$font-size-base:              0.9rem !default; // Assumes the browser default, typically `16px`
+$fa-font-path : "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome.scss";
+
+@import "~toastr/toastr";
+
+/* load bootstrap library */
+@import '~bootstrap/scss/bootstrap';
