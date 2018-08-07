@@ -33,7 +33,7 @@ export class ContactComponent implements OnInit {
       last_name : [user.last_name  || '', [Validators.required]],
       email : [ user.email || '', [Validators.compose([Validators.email, Validators.required])]],
       phone : [ user.phone || '', [Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])]],
-      active : [ user.active || false]
+      active : [ user.active || 'false']
     })
   }
 
