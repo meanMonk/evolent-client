@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactListComponent } from './contact-list.component';
+import { AppModule } from '../app.module';
+import { APP_BASE_HREF } from '@angular/common';
 
 describe('ContactListComponent', () => {
   let component: ContactListComponent;
@@ -8,7 +10,12 @@ describe('ContactListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactListComponent ]
+      imports: [
+        AppModule
+      ],
+      providers: [
+        {provide: APP_BASE_HREF, useValue: '/'}
+      ]
     })
     .compileComponents();
   }));

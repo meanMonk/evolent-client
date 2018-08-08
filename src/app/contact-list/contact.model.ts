@@ -3,6 +3,6 @@ export class User {
     last_name : string;
     email : string;
     phone : string;
-    active : boolean;
-    _id: string;
+    status : string;
+    _id?: string;
 }

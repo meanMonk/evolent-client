@@ -11,6 +11,14 @@ const httpOptions = {
   })
 };
 
+export interface User {
+  first_name: string;
+  last_name: string;
+  email: string;
+  phone: string;
+  active: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,7 +29,7 @@ export class RestService {
   constructor(private http : HttpClient) { }
 
   getUsers() {
-    return this.http.get(this.API_URL + '/users')
+    return this.http.get<User[]>(this.API_URL + '/users')
   }
   
   newUser(user) {
