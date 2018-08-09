@@ -13,7 +13,7 @@ import toastr from 'toastr';
 import { FormControl } from '@angular/forms';
 
 
-/** 
+/**
  * Email Validator for validating the EMAILS
  * */
 export class EmailValidator {
@@ -38,9 +38,9 @@ export class ContactComponent implements OnInit {
   contactForm : FormGroup;
   userId : string;
 
-  constructor(private storageService : StorageService,
-              private restService : RestService,
-              private router : Router,
+  constructor(private storageService: StorageService,
+              private restService: RestService,
+              private router: Router,
               private _fb: FormBuilder) { }
 
   ngOnInit() {
@@ -72,7 +72,7 @@ export class ContactComponent implements OnInit {
             this.router.navigate(['/list']);
             this.storageService.setBlob({});
         },
-        (err) =>{ 
+        (err) =>{
           console.log(err);
           toastr.error('Error Occurred !');
           this.router.navigate(['/list']);
@@ -87,7 +87,7 @@ export class ContactComponent implements OnInit {
             this.router.navigate(['/list']);
             this.storageService.setBlob({});
         },
-        (err) =>{ 
+        (err) => {
           console.log(err);
           toastr.error('Error Occurred !');
           this.router.navigate(['/list']);

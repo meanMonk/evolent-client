@@ -19,41 +19,41 @@ export class ContactListComponent implements OnInit {
   userList: User[];
 
   constructor( private restService: RestService,
-               private router : Router, 
+               private router: Router,
                private storageService: StorageService) { }
 
   ngOnInit() {
-    this.loadData()
+    this.loadData();
   }
 
   loadData() {
     this.restService.getUsers().subscribe(
-      (res : User[]) => {
+      (res: User[]) => {
         this.userList = res;
-        toastr.success('Data loaded sucessfully !')
+        toastr.success('Data loaded successfully !');
       },
       (err) => {
-        console.log('error occured', err.message);
-        toastr.error('Error Occured !')
+        console.log('error occurred', err.message);
+        toastr.error('Error occurred !');
       }
     )
   }
 
-  editUser(user) { 
+  editUser(user) {
     this.storageService.setBlob(user);
-    this.router.navigate(['/create'])
+    this.router.navigate(['/create']);
   }
 
-  deleteUser(userId) { 
+  deleteUser(userId) {
     this.restService.deleteUser(userId).subscribe(
-      (res)=>{
-          toastr.success('User deleted sucessfully !');
+      (res) => {
+          toastr.success('User deleted successfully !');
           console.log(res);
           this.loadData();
       },
       (err) => {
-          console.log('error occured', err.message);
-          toastr.error('Error Occured !')
+          console.log('error occurred', err.message);
+          toastr.error('Error occurred !');
       }
     )
   }

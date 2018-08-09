@@ -1,27 +1,35 @@
-# EvolentClient
+# Evolent Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+## Contact Form Exercise build with technologies.
+* Angular 6
+* NodeJs
+* Mongodb
+* Express
+## Demo of application can be at the [DEMO LINK](https://evolent-exercise.herokuapp.com/);
+ `` link https://evolent-exercise.herokuapp.com``
 
-## Development server
+### *Frontend* Project Code > [GitHub Link](https://github.com/meanMonk/evolent-client)
+### *backend* Project Code > [GitHub Link](https://github.com/meanMonk/evolent-server)
+### *Rest* API Documents > [DOC LINK](https://evolent-exercise.herokuapp.com/api-docs);
+  
+This project was generated with Angular CLI version 6.1.1.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## To Start development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Running unit tests
-
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Production build
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+**__please make sure that you have cloned client project and server project repo in same directory__**
 
-## Further help
+Run `ng build --prod` to generate the production. 
+The build artifacts will be stored in the `evolent-server/dist/` directory if you have both project in same directory. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Project Images : 
+![Image of users list]
+(./list.png)
+
+![Image of user create form]
+(./form.png)

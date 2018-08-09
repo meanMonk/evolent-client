@@ -9,12 +9,12 @@ import { User } from '../contact-list/contact.model';
   providedIn: 'root'
 })
 export class StorageService {
-  
-  userBlob : User;
-  
+
+  userBlob: User;
+
   constructor() { }
 
-  getBlob() { 
+  getBlob() {
     return this.userBlob || {};
   }
 
