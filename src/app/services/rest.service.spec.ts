@@ -12,7 +12,7 @@ describe('RestService', () => {
 
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [RestService,]
+      providers: [RestService]
     });
     injector = getTestBed();
     restService = injector.get(RestService);
@@ -27,6 +27,10 @@ describe('RestService', () => {
     expect(service).toBeTruthy();
   }));
 
+  /**
+   * Test for GetUser
+   */
+
   describe(">> getUsers()", () => {
     it("> should return an Observable of Users[]", () => {
       const dummyUsers: User[] = [
@@ -35,14 +39,14 @@ describe('RestService', () => {
           last_name: "doe",
           email: "johndoe@info.com",
           phone: "1234567890",
-          active: "false"
+          status: "active"
         },
         {
           first_name: "abc",
           last_name: "test",
           email: "johndoe@info.com",
           phone: "1234567890",
-          active: "true"
+          status: "Inactive"
         }
       ];
 
@@ -57,6 +61,10 @@ describe('RestService', () => {
 
     });
   });
+  
+  /**
+   * Test for NewUser
+   */
   describe(">> newUser(user)", () => {
     it("> should create new user and send the message as successfull", () => {
       let user = {
@@ -64,7 +72,7 @@ describe('RestService', () => {
         last_name: "doe",
         email: "johndoe@info.com",
         phone: "1234567890",
-        active: "false"
+        status: "active"
       };
       let result = {
         message: "User created successfully"
@@ -78,6 +86,9 @@ describe('RestService', () => {
       req.flush(result);
     })
   })
+  /**
+   * Test for UpdateUser
+   */
   describe(">> updateUser(user, id)", () => {
     it("> should user data", () => {
       let user = {
@@ -95,12 +106,17 @@ describe('RestService', () => {
       req.flush(result);
     })
   })
+
+
+  /**
+   * Test for delete user
+   */
   describe(">> deleteUser(userID)", () => {
     it("> should delete the user", () => {
       let result = {
         message: "User deleted successfully"
       }
-      restService.newUser('a').subscribe((res) => {
+      restService.deleteUser('a').subscribe((res) => {
         expect(res).toEqual(result);
       })
 

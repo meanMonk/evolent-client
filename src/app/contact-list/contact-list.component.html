@@ -22,8 +22,8 @@
                 <td>{{user.email}}</td>
                 <td>{{user.phone}}</td>
                 <td>
-                    <span class="badge badge-pill badge-primary" *ngIf="user.status == 'Active'">Active</span>
-                    <span class="badge badge-pill badge-danger" *ngIf="user.status != 'Inactive'" >Deactived</span>
+                    <span class="badge badge-pill badge-primary" *ngIf="user.status.toLowerCase() == 'active'">Active</span>
+                    <span class="badge badge-pill badge-danger" *ngIf="user.status.toLowerCase() != 'active'" >Inactive</span>
                 </td>
                 <td>
                     <button type="button" (click)="editUser(user)" class="px-1 mr-1 text-center py-0 btn btn-primary">

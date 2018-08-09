@@ -1,3 +1,7 @@
+/**
+ * Author : Sahil kashetwar [sahilkashetwar24@gmail.com]
+ **/
+
 import { Injectable } from '@angular/core';
 import { User } from '../contact-list/contact.model';
 import { Observable, of } from 'rxjs';
@@ -16,7 +20,7 @@ export interface User {
   last_name: string;
   email: string;
   phone: string;
-  active: string;
+  status: string;
 }
 
 @Injectable({

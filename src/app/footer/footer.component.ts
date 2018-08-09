@@ -1,3 +1,7 @@
+/**
+ * Author : Sahil kashetwar [sahilkashetwar24@gmail.com]
+ **/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

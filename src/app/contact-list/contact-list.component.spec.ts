@@ -30,7 +30,7 @@ describe('ContactListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  describe('@loadData() should has to load the data', ()=>{
+  /* describe('@loadData() should has to load the data', ()=>{
     it('should update the userList array if success', () => {
       expect(component).toBeTruthy();
     });
@@ -52,6 +52,6 @@ describe('ContactListComponent', () => {
     it('should update the userList array if success', () => {
       expect(component).toBeTruthy();
     });
-  })
+  }) */
 
 });
