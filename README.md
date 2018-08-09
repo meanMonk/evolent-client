@@ -9,9 +9,9 @@
 Demo of application can be at the [DEMO LINK](https://evolent-exercise.herokuapp.com/);
  `` link https://evolent-exercise.herokuapp.com``
 
-**Frontend** Project Code  [GitHub Link](https://github.com/meanMonk/evolent-client)
-**backend** Project Code  [GitHub Link](https://github.com/meanMonk/evolent-server)
-**Rest** API Documents  [DOC LINK](https://evolent-exercise.herokuapp.com/api-docs)
+* **Frontend** Project Code  [GitHub Link](https://github.com/meanMonk/evolent-client)
+* **backend** Project Code  [GitHub Link](https://github.com/meanMonk/evolent-server)
+* **Rest** API Documents  [DOC LINK](https://evolent-exercise.herokuapp.com/api-docs)
   
 This project was generated with Angular CLI version 6.1.1.
 
