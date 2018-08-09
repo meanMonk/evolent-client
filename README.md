@@ -15,17 +15,17 @@ Demo of application can be at the [DEMO LINK](https://evolent-exercise.herokuapp
   
 This project was generated with Angular CLI version 6.1.1.
 
->> To Start development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+# To Start development server
+>> Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
->> Running unit tests
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Running unit tests
+>> Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
->> Production build
+# Production build
 
 **__please make sure that you have cloned client project and server project repo in same directory__**
 
-Run `ng build --prod` to generate the production. 
+>> Run `ng build --prod` to generate the production. 
 The build artifacts will be stored in the `evolent-server/dist/` directory if you have both project in same directory. 
 
 Project Images : 
