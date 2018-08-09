@@ -30,7 +30,7 @@ The build artifacts will be stored in the `evolent-server/dist/` directory if yo
 
 Project Images : 
 ![Image of users list]
-(https://github.com/meanMonk/evolent-client/blob/master/list.png)
+(list.png)
 
 ![Image of user create form]
-(https://github.com/meanMonk/evolent-client/blob/master/form.png)
+(form.png)
