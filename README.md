@@ -29,8 +29,6 @@ Run `ng build --prod` to generate the production.
 The build artifacts will be stored in the `evolent-server/dist/` directory if you have both project in same directory. 
 
 Project Images : 
-![Image of users list]
-(list.png)
+![Image of users list](list.png)
 
-![Image of user create form]
-(form.png)
+![Image of user create form](form.png)
